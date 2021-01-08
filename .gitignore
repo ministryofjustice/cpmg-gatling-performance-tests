@@ -21,6 +21,7 @@ temp
 dist
 test-output
 build.log
+results/
 
 # misc
 .DS_Store
