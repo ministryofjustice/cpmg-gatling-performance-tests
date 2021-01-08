@@ -1,0 +1,10 @@
+{
+  "simulation": "simulations.XMLEndpointAPI",
+  "simulationId": "xmlendpointapi",
+  "start": 1607350540550,
+  "description": "",
+  "scenarios": ["Libra Batch Process API"],
+  "assertions": [
+
+  ]
+}

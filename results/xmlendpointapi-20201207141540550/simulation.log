@@ -1,0 +1,10 @@
+RUN	simulations.XMLEndpointAPI	xmlendpointapi	1607350540550	 	3.4.1
+USER	Libra Batch Process API	START	1607350547081
+REQUEST		cpmAPI enpoint	1607350547116	1607350547649	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350550672	1607350550786	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350553800	1607350553890	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350556898	1607350556992	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350560001	1607350560098	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350563109	1607350563206	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350566218	1607350566372	KO	j.i.IOException: Premature close
+REQUEST		cpmAPI enpoint	1607350569382	1607350569479	KO	j.i.IOException: Premature close

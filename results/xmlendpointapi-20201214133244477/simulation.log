@@ -1,0 +1,10 @@
+RUN	simulations.XMLEndpointAPI	xmlendpointapi	1607952764477	 	3.4.1
+USER	Libra Batch Process API	START	1607952771657
+REQUEST		cpmAPI enpoint	1607952771701	1607952772364	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952775403	1607952775436	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952778454	1607952778486	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952781498	1607952781530	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952784538	1607952784579	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952787588	1607952787627	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952790644	1607952790680	KO	status.find.is(200), but actually found 500
+REQUEST		cpmAPI enpoint	1607952793698	1607952793735	KO	status.find.is(200), but actually found 500

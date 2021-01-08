@@ -1,0 +1,11 @@
+RUN	simulations.XMLEndpointAPI	xmlendpointapi	1608124974142	 	3.4.1
+USER	Libra Batch Process API	START	1608124981155
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124981264
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124984299
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124987307
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124990317
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124993326
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124996337
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608124999342
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608125002347
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'hearing_Date' is defined 	1608125005364

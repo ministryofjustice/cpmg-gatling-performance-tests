@@ -1,0 +1,11 @@
+RUN	simulations.XMLEndpointAPI	xmlendpointapi	1608124504075	 	3.4.1
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124511173
+USER	Libra Batch Process API	START	1608124511082
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124514206
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124517220
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124520236
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124523248
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124526256
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124529266
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124532275
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'court_code' is defined 	1608124535292

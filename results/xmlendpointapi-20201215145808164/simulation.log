@@ -1,0 +1,11 @@
+RUN	simulations.XMLEndpointAPI	xmlendpointapi	1608044288164	 	3.4.1
+USER	Libra Batch Process API	START	1608044306946
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044307022
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044310050
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044313070
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044316081
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044319086
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044322090
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044325103
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044328117
+ERROR	cpmAPI enpoint: Failed to build request: No attribute named 'local_nowDate' is defined 	1608044331134
