@@ -90,9 +90,9 @@ class XMLEndpointAPI extends Simulation {
             .feed(csvSurname)
             .exec(http("cpmAPI enpoint")
             .post("/crime-portal-gateway/ws") // Enpoint of mock version.
-               .body(ElFileBodyPart("bodies/HeaderXMLMessage.xml"))
-              .body(ElFileBodyPart("bodies/BodyXMLMessage.xml"))
-              .body(ElFileBodyPart("bodies/FooterXMLMessage.xml"))
+               .bodyPart(ElFileBodyPart("bodies/HeaderXMLMessage.xml"))
+              .bodyPart(ElFileBodyPart("bodies/BodyXMLMessage.xml"))
+              .bodyPart(ElFileBodyPart("bodies/FooterXMLMessage.xml"))
               //.body(ElFileBody(request)
             //.body(ElFileBody("bodies/POSTXMLMessage.xml"))
             //.body(StringBody("bodies/POSTXMLMessage.xml"))
