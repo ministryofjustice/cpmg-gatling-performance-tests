@@ -16,9 +16,18 @@ class XMLEndpointAPI extends Simulation {
   //var caseNo  : Seq[Long] = _
 
   //Java Writer
-  val courtRoomNumber_writer = {
-    val fos = new java.io.FileOutputStream("courtRoomNumber.csv")
+  var courtRoomNumber_writer = {
+    val fos = new java.io.FileOutputStream("variables.csv")
     new java.io.PrintWriter(fos, true)
+    }
+
+  val createCaseNumberCsv = {
+    val fos = new java.io.FileOutputStream("src/test/resources/data/caseNumber.csv")
+    new java.io.PrintWriter(fos, true)
+  }
+
+  for (i <- 1 until 23 ) {
+    createCaseNumberCsv.println(generateRandomNumber())
   }
 
   val now = LocalDate.now()
@@ -110,6 +119,7 @@ class XMLEndpointAPI extends Simulation {
     .feed(csvDOBYear)
     .feed(csvFirstName)
     .feed(csvSurname)
+    .feed(csvCaseNumber, 22)
     .exec(http("cpmAPI enpoint")
       .post("/crime-portal-gateway/ws") // Enpoint of mock version.
       .body(StringBody(testXml))
@@ -121,26 +131,14 @@ class XMLEndpointAPI extends Simulation {
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
 
       .check(status.is(200))
-      .check(status.not(404), status.not(500))
-    )
+      .check(status.not(404), status.not(500)))
     .pause(3)
-
-    //Save variable caseNo into the csv file
-    .foreach("${caseNo}", "caseNo") {
-      exec(session => {
-        courtRoomNumber_writer.println(session("caseNo").as[String])
-        session
-      })
-    }
-
-  for (i <- 1 until 25 ) {
-    courtRoomNumber_writer.println(session("caseNo").as[String])
-  }
-  //      .exec(session => {
-  //            courtRoomNumber_writer.println(session(s"caseNo").as[String])
-  //            session
-  //          })
-
+    .exec(session => {
+      for (i <- 1 until 23 ) {
+        courtRoomNumber_writer.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
+      }
+      session
+    })
 
   //setUp(
   //scn.inject

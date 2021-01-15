@@ -56,7 +56,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo1}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -94,7 +94,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo2}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -132,7 +132,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo3}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -170,7 +170,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo4}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -208,7 +208,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo5}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -246,7 +246,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo6}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -284,7 +284,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo7}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -322,7 +322,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo8}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -360,7 +360,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo9}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -398,7 +398,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo10}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -436,7 +436,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo11}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -474,7 +474,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo12}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -512,7 +512,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo13}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -550,7 +550,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo14}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -588,7 +588,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo15}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -626,7 +626,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo16}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -664,7 +664,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo17}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -702,7 +702,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo18}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -740,7 +740,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo19}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -778,7 +778,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo20}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -816,7 +816,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo21}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>
@@ -854,7 +854,7 @@ object XMLMessageString
                         <h_id>1294273</h_id>
                         <valid>Y</valid>
                         <!-- Less than 10 digits would fail schema validation, if we did it -->
-                        <caseno>${caseNo}</caseno>
+                        <caseno>${caseNo22}</caseno>
                         <type>C</type>
                         <def_name>MR ${firstName} ${surname}</def_name>
                         <def_dob>${dobDay}/${dobMonth}/${dobYear}</def_dob>

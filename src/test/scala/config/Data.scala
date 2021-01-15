@@ -11,5 +11,5 @@ object Data {
   val csvDOBDay = csv("data/dobDay.csv").random
   val csvDOBMonth = csv("data/dobMonth.csv").random
   val csvDOBYear = csv("data/dobYear.csv").random
-
+  val csvCaseNumber = csv("data/caseNumber.csv").random
 }
