@@ -3,7 +3,7 @@ package simulations
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-import config.Data._
+import config.Data.{csvCourtInfo, _}
 import config.XMLMessageString._
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
@@ -13,22 +13,17 @@ import scala.util.Random
 
 class XMLEndpointAPI extends Simulation {
 
-  //var caseNo  : Seq[Long] = _
-
-  //Java Writer
-  var courtRoomNumber_writer = {
-    val fos = new java.io.FileOutputStream("variables.csv")
-    new java.io.PrintWriter(fos, true)
-    }
-
-  val createCaseNumberCsv = {
-    val fos = new java.io.FileOutputStream("src/test/resources/data/caseNumber.csv")
+  val createOutputVariables = {
+    val fos = new java.io.FileOutputStream("src/test/resources/data/createOutputVariables.csv")
     new java.io.PrintWriter(fos, true)
   }
 
-  for (i <- 1 until 23 ) {
-    createCaseNumberCsv.println(generateRandomNumber())
-  }
+
+  //    createCaseNumberCsv.println("caseNo")
+  //  for (i <- 1 until 100000 ) {
+  //    createCaseNumberCsv.println(generateRandomNumber())
+  ////    createCaseNumberCsv.println(court)
+  //  }
 
   val now = LocalDate.now()
   val pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd")
@@ -86,23 +81,28 @@ class XMLEndpointAPI extends Simulation {
 
   }
 
-  def hearing_Date(startDate:LocalDate): String =
-  {
-    startDate.minusDays(Random.nextInt(30)).format(pattern)
+  def hearing_Date(startDate:LocalDate): String = {
+    {
+      startDate.minusDays(Random.nextInt(30)).format(pattern)
+    }
+
+
   }
 
-
+  //Set user as (message count) in this case set to 1.
   def userCount: Int = getProperty("Users", "1").toInt
 
-  def rampDuration: Int = getProperty("Ramp_Duration", "10").toInt
+  //def rampDuration: Int = getProperty("Ramp_Duration", "10").toInt
 
-  def testDuration: Int = getProperty("Test_Duration", "30").toInt
+  //Run once through set duration to 0.
+  def testDuration: Int = getProperty("Test_Duration", "0").toInt
+
 
   def numberOfMessages: Int = getProperty("Number_of_messages", "1").toInt
 
   before {
     println(s"Running tests with ${userCount} users.")
-    println(s"Ramp duration is: ${rampDuration} seconds.")
+    //println(s"Ramp duration is: ${rampDuration} seconds.")
     println(s"Test duration is: ${testDuration} seconds.")
     println(s"Number of messages used in test are: ${numberOfMessages}.")
   }
@@ -114,20 +114,17 @@ class XMLEndpointAPI extends Simulation {
     //exec(session => session.set("body", body))
     //exec(session => session.set("hearing_Date", hearing_Date(local_nowDate())))
     .feed(csvCourtInfo)
-    .feed(csvDOBDay)
-    .feed(csvDOBMonth)
-    .feed(csvDOBYear)
-    .feed(csvFirstName)
-    .feed(csvSurname)
+    .feed(csvDOBDay,22)
+    .feed(csvDOBMonth,12)
+    .feed(csvDOBYear,22)
+    .feed(csvFirstName,22)
+    .feed(csvSurname,22)
     .feed(csvCaseNumber, 22)
+    .feed(csvDefendantMatch,17)
     .exec(http("cpmAPI enpoint")
       .post("/crime-portal-gateway/ws") // Enpoint of mock version.
       .body(StringBody(testXml))
       .requestTimeout(3.minutes)
-      //.body(ElFileBody(request)
-      //.body(ElFileBody("bodies/POSTXMLMessage.xml"))
-      //.body(StringBody("bodies/POSTXMLMessage.xml"))
-
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
 
       .check(status.is(200))
@@ -135,22 +132,24 @@ class XMLEndpointAPI extends Simulation {
     .pause(3)
     .exec(session => {
       for (i <- 1 until 23 ) {
-        courtRoomNumber_writer.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
+        //createCaseNumberCsv.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
+        createOutputVariables.println(session("caseNo"+i).as[String],session("court_code").as[String])
       }
       session
     })
 
-  //setUp(
-  //scn.inject
-  //(nothingFor(5 seconds),
-  //rampUsers(userCount)
-  //during (rampDuration))
-  //)
-  //.protocols(httpProtocol).maxDuration(testDuration)
-
   setUp(
-    scn.inject(atOnceUsers(1))
-  ).protocols(httpProtocol)
+
+    scn.inject
+    (nothingFor(5 seconds),
+      atOnceUsers(userCount)
+    )
+  )
+    .protocols(httpProtocol)
+
+  //setUp(
+  //scn.inject(atOnceUsers(1))
+  //).protocols(httpProtocol)
 
 }
 
