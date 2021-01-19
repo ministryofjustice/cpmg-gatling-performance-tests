@@ -18,7 +18,6 @@ class XMLEndpointAPI extends Simulation {
     new java.io.PrintWriter(fos, true)
   }
 
-
   //    createCaseNumberCsv.println("caseNo")
   //  for (i <- 1 until 100000 ) {
   //    createCaseNumberCsv.println(generateRandomNumber())
@@ -30,18 +29,8 @@ class XMLEndpointAPI extends Simulation {
 
   def numberOfCourts: Int = getProperty("Number_Of_Courts", "1").toInt
 
-  def buildCpmgBody() = {
-
-    var totalBodies = ""
-
-    for (i <- 1 until numberOfCourts + 1) {
-      totalBodies += cmpgBody
-    }
-    totalBodies
-  }
-
   def testXml = {
-    cmpgHeader + buildCpmgBody() + cmpgFooter
+    cmpgHeader + cmpgBody + cmpgFooter
   }
 
   val httpProtocol = http
@@ -69,8 +58,6 @@ class XMLEndpointAPI extends Simulation {
 
   // Generate code for CaseNo.
   def generateRandomNumber() = {
-
-
     val rangeMin = 1000000000000L
     val rangeMax = 9999999999999L
 
@@ -78,31 +65,22 @@ class XMLEndpointAPI extends Simulation {
     val randomValue = rangeMin + ((rangeMax - rangeMin) * r.nextDouble())
 
     randomValue.toLong
-
   }
 
   def hearing_Date(startDate:LocalDate): String = {
-    {
-      startDate.minusDays(Random.nextInt(30)).format(pattern)
-    }
-
-
+    startDate.minusDays(Random.nextInt(30)).format(pattern)
   }
 
   //Set user as (message count) in this case set to 1.
   def userCount: Int = getProperty("Users", "1").toInt
 
-  //def rampDuration: Int = getProperty("Ramp_Duration", "10").toInt
-
   //Run once through set duration to 0.
   def testDuration: Int = getProperty("Test_Duration", "0").toInt
-
 
   def numberOfMessages: Int = getProperty("Number_of_messages", "1").toInt
 
   before {
     println(s"Running tests with ${userCount} users.")
-    //println(s"Ramp duration is: ${rampDuration} seconds.")
     println(s"Test duration is: ${testDuration} seconds.")
     println(s"Number of messages used in test are: ${numberOfMessages}.")
   }
