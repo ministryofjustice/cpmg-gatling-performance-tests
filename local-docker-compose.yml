@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  gatling:
+    image: maven
+    volumes:
+      - .:/home/tools/data
+    command: "mvn clean gatling:test -f /home/tools/data/pom.xml -DUser=1 -DNumber_of_messages=1"

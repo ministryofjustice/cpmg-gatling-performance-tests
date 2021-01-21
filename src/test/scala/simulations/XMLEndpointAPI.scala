@@ -1,5 +1,6 @@
 package simulations
 
+import java.io.{FileOutputStream, PrintWriter}
 import java.time.{LocalDate, LocalDateTime}
 import java.time.format.DateTimeFormatter
 
@@ -14,10 +15,17 @@ import scala.util.Random
 class XMLEndpointAPI extends Simulation {
 
   val createOutputVariables = {
-    val fos = new java.io.FileOutputStream("src/test/resources/data/createOutputVariables.csv")
+    val fos = new java.io.FileOutputStream("createOutputVariables.csv")
     new java.io.PrintWriter(fos, true)
   }
 
+  val createCaseOutput = {
+    val fos = new FileOutputStream("100cases.xml")
+    new PrintWriter(fos, true)
+  }
+
+//  for(i <- 1 until 100)
+//    createCaseOutput.println("<case>\n                                                    <c_id>1218461</c_id>\n                                                    <h_id>1294273</h_id>\n                                                    <valid>Y</valid>\n                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->\n                                                    <caseno>${caseNo" + i +"}</caseno>\n                                                    <type>C</type>\n                                                    <def_name>MR ${Matched_FirstName" + i +"} ${Matched_Surname"+ i +"}</def_name>\n                                                    <def_dob>${Matched_dobDay"+ i +"}/${Matched_dobMonth"+ i +"}/${Matched_dobYear"+ i +"}</def_dob>\n                                                    <def_type>P</def_type>\n                                                    <def_sex>M</def_sex>\n                                                    <def_name_elements>\n                                                        <title>Mr</title>\n                                                        <forename1>${Matched_FirstName"+ i +"}</forename1>\n                                                        <forename2/>\n                                                        <forename3/>\n                                                        <surname>${Matched_Surname"+ i +"}</surname>\n                                                    </def_name_elements>\n                                                    <pnc_id>${Matched_PNC"+ i +"}</pnc_id>\n                                                    <cro_number>CR0006100061</cro_number>\n                                                    <def_addr>\n                                                        <line1>A1</line1>\n                                                    </def_addr>\n                                                    <inf>POL01</inf>\n                                                    <cseq>2</cseq>\n                                                    <listno>1st</listno>\n                                                    <offences>\n                                                        <offence>\n                                                            <oseq>1</oseq>\n                                                            <co_id>1185408</co_id>\n                                                            <code>TH68010</code>\n                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>\n                                                            <title>Theft from a shop</title>\n                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>\n                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>\n                                                        </offence>\n                                                    </offences>\n                                                </case>")
   //    createCaseNumberCsv.println("caseNo")
   //  for (i <- 1 until 100000 ) {
   //    createCaseNumberCsv.println(generateRandomNumber())
@@ -134,25 +142,25 @@ class XMLEndpointAPI extends Simulation {
     .exec(session => session.set("caseNo",generateRandomNumber()))
     .exec(session => session.set("courtRoomNumber",courtRoomNumber()))
     .feed(csvCourtInfo)
-    .feed(csvDOBDay,22)
-    .feed(csvDOBMonth,12)
-    .feed(csvDOBYear,22)
-    .feed(csvFirstName,22)
-    .feed(csvSurname,22)
-    .feed(csvCaseNumber, 25)
-    .feed(csvDefendantMatch,80)
+    .feed(csvDOBDay,100)
+    .feed(csvDOBMonth,100)
+    .feed(csvDOBYear,100)
+    .feed(csvFirstName,100)
+    .feed(csvSurname,100)
+    .feed(csvCaseNumber, 100)
+    .feed(csvDefendantMatch,100)
     .exec(http("cpmAPI enpoint")
       .post("/crime-portal-gateway/ws") // Enpoint of mock version.
-      .body(ElFileBody("src/test/resources/bodies/100CaseXMLMessage.xml")).asXml
+//      .body(ElFileBody("/home/tools/data/src/test/resources/bodies/25CaseXMLMessage.xml")).asXml
+      .body(ElFileBody("src/test/resources/bodies/100CaseXMLMessage.xml"))
       //.body(StringBody(testXml))
       .requestTimeout(3.minutes)
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
-
       .check(status.is(200))
       .check(status.not(404), status.not(500)))
     .pause(3)
     .exec(session => {
-      for (i <- 1 until 81 ) {
+      for (i <- 1 until 25 ) {
         //createCaseNumberCsv.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
         createOutputVariables.println(session("caseNo"+i).as[String],session("court_code").as[String]
           ,session("courtRoomNumber").as[String],session("local_nowTime").as[String])
