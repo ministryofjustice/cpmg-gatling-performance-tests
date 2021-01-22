@@ -14,11 +14,13 @@ import scala.util.Random
 
 class XMLEndpointAPI extends Simulation {
 
+  //Create an output to help monitoring of devs.
   val createOutputVariables = {
     val fos = new java.io.FileOutputStream("createOutputVariables.csv")
     new java.io.PrintWriter(fos, true)
   }
 
+  //Create the output for cases of 100 in an XML.
   val createCaseOutput = {
     val fos = new FileOutputStream("100cases.xml")
     new PrintWriter(fos, true)
@@ -32,11 +34,14 @@ class XMLEndpointAPI extends Simulation {
   ////    createCaseNumberCsv.println(court)
   //  }
 
+  //Specify for time for hearing date.
   val now = LocalDate.now()
   val pattern = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
+  //Number of courts.
   def numberOfCourts: Int = getProperty("Number_Of_Courts", "1").toInt
 
+  //Specifying bodies method.
   def buildCpmgBody() = {
 
     var totalBodies = ""
@@ -47,10 +52,12 @@ class XMLEndpointAPI extends Simulation {
     totalBodies
   }
 
+  //For when we string together a whole message with specified bodies.
   def testXml = {
     cmpgHeader + buildCpmgBody() + cmpgFooter
   }
 
+  //Headers for POST message.
   val httpProtocol = http
     .baseUrl("https://crime-portal-gateway-dev.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
     //.baseUrl("https://dev.crime-portal-mirror-gateway.service.justice.gov.uk") // Here is the BaseURL for our live test,we will send our XML to this.
@@ -60,7 +67,8 @@ class XMLEndpointAPI extends Simulation {
     .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
 
-  private def getProperty(propertyName: String, defaultValue: String): String =
+  //Using default and specified values for cmd line args.
+  private def getProperty(propertyName: String, defaultValue: String): String = {
   {
     {
       Option(System.getenv(propertyName))
@@ -69,18 +77,24 @@ class XMLEndpointAPI extends Simulation {
     }
   }
 
+  //Date for message.
+  }
+
   def local_nowDate(): String = {
     {
       DateTimeFormatter.ofPattern("dd/MM/YYYY").format(now)
     }
   }
 
+
+  //For the sourcefilename to be unique.
   def source_fileDate(): String = {
     {
       DateTimeFormatter.ofPattern("ddMMYYYY").format(now)
     }
   }
 
+  //For generating date with time.
   def local_nowTime():String = {
 
     LocalDateTime.now.format(DateTimeFormatter.ofPattern("YYYYMMdd_HHmmss"))
@@ -96,24 +110,24 @@ class XMLEndpointAPI extends Simulation {
     randomValue.toLong
   }
 
-  def courtRoomNumber(): Int =
+  //Court room number to take one digit to append to 0 to make '0X'
+  def courtRoomNumber(): Int = {
   {
-    val roomMin = 10
-    val roomMax = 99
+    val roomMin = 0
+    val roomMax = 9
 
     val r = new Random()
     val randomValue = roomMin + ((roomMin - roomMax) * r.nextInt())
     randomValue.toInt
   }
 
+  }
 
-
+  //Date of hearing.
   def hearing_Date(startDate:LocalDate): String = {
     {
       startDate.minusDays(Random.nextInt(30)).format(pattern)
     }
-
-
   }
 
   //Set user as (message count) in this case set to 1.
@@ -124,7 +138,7 @@ class XMLEndpointAPI extends Simulation {
   //Run once through set duration to 0.
   def testDuration: Int = getProperty("Test_Duration", "0").toInt
 
-
+  //Number of bodies from document -> document.
   def numberOfMessages: Int = getProperty("Number_of_messages", "1").toInt
 
   before {
@@ -152,7 +166,7 @@ class XMLEndpointAPI extends Simulation {
     .exec(http("cpmAPI enpoint")
       .post("/crime-portal-gateway/ws") // Enpoint of mock version.
 //      .body(ElFileBody("/home/tools/data/src/test/resources/bodies/25CaseXMLMessage.xml")).asXml
-      .body(ElFileBody("src/test/resources/bodies/100CaseXMLMessage.xml"))
+      .body(ElFileBody("/home/tools/data/src/test/resources/bodies/100CaseXMLMessage.xml"))
       //.body(StringBody(testXml))
       .requestTimeout(3.minutes)
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
