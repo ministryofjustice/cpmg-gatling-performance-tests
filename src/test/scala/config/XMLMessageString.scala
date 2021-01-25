@@ -41,7 +41,7 @@ object XMLMessageString
                 <cmu>Gl Management Unit 1</cmu>
                 <panel>Adult Panel</panel>
                 <court>${court_name}</court>
-                <room>00</room>
+                <room>0${courtRoomNumber}</room>
                 <sstart>09:00</sstart>
                 <send>12:00</send>
                 <blocks>
