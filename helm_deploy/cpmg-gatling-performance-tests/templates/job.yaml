@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ template “app.fullname” . }}
+  name: {{ template "app.fullname" . }}
 spec:
   template:
     spec:
