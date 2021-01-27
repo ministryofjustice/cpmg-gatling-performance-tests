@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
       - name: crime-portal-gateway
-        image: “{{ .Values.image.repository }}:{{ .Values.image.tag }}”
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
       restartPolicy: Never
   backoffLimit: 1
