@@ -11,17 +11,13 @@ workflows:
           name: helm_lint
       - hmpps/build_docker:
           name: build_docker
-          filters:
-            branches:
-              only:
-                - main
-          - request-preprod-approval:
-              type: approval
-          - hmpps/deploy_env:
-              name: deploy_preprod
-              env: "preprod"
-              context:
-                - hmpps-common-vars
-                - hmpps-template-kotlin-preprod
-              requires:
-                - request-preprod-approval
+      - request-preprod-approval:
+          type: approval
+      - hmpps/deploy_env:
+          name: deploy_preprod
+          env: "preprod"
+          context:
+            - hmpps-common-vars
+            - hmpps-template-kotlin-preprod
+          requires:
+            - request-preprod-approval
