@@ -1,0 +1,27 @@
+version: 2.1
+
+orbs:
+  hmpps: ministryofjustice/hmpps@2.2
+
+workflows:
+  version: 2
+  build-test-and-deploy:
+    jobs:
+      - hmpps/helm_lint:
+          name: helm_lint
+      - hmpps/build_docker:
+          name: build_docker
+          filters:
+            branches:
+              only:
+                - main
+          - request-preprod-approval:
+              type: approval
+          - hmpps/deploy_env:
+              name: deploy_preprod
+              env: "preprod"
+              context:
+                - hmpps-common-vars
+                - hmpps-template-kotlin-preprod
+              requires:
+                - request-preprod-approval
