@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "cpmg-gatling-performance-tests"
+spec:
+  template:
+    spec:
+      containers:
+      - name: crime-portal-gateway
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+      restartPolicy: Never
+  backoffLimit: 1
