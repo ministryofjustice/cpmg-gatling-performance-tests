@@ -6,7 +6,7 @@ spec:
   template:
     spec:
       containers:
-      - name: crime-portal-gateway
+      - name: "cpmg-gatling-performance-tests"
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
       restartPolicy: Never
   backoffLimit: 1
