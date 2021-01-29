@@ -3,6 +3,7 @@ package simulations
 import java.io.{FileOutputStream, PrintWriter}
 import java.time.{LocalDate, LocalDateTime}
 import java.time.format.DateTimeFormatter
+import java.util.UUID.randomUUID
 
 import config.Data.{csvCourtInfo, _}
 import config.XMLMessageString._
@@ -155,6 +156,7 @@ class XMLEndpointAPI extends Simulation {
     .exec(session => session.set("source_fileDate", source_fileDate()))
     .exec(session => session.set("caseNo",generateRandomNumber()))
     .exec(session => session.set("courtRoomNumber",courtRoomNumber()))
+    .exec(session => session.set("messageId", randomUUID()))
     .feed(csvCourtInfo)
     .feed(csvDOBDay,100)
     .feed(csvDOBMonth,100)
@@ -164,9 +166,9 @@ class XMLEndpointAPI extends Simulation {
     .feed(csvCaseNumber, 100)
     .feed(csvDefendantMatch,100)
     .exec(http("cpmAPI enpoint")
-      .post("/crime-portal-gateway/ws") // Enpoint of mock version.
-//      .body(ElFileBody("/home/tools/data/src/test/resources/bodies/25CaseXMLMessage.xml")).asXml
-      .body(ElFileBody("/home/tools/data/src/test/resources/bodies/100CaseXMLMessage.xml"))
+    .post("/crime-portal-gateway/ws") // Enpoint of mock version.
+    .body(ElFileBody("bodies/25CaseXMLMessage.xml")).asXml
+//      .body(ElFileBody("bodies/100CaseXMLMessage.xml"))
       //.body(StringBody(testXml))
       .requestTimeout(3.minutes)
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
