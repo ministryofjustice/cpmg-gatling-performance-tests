@@ -11,6 +11,9 @@ WORKDIR /opt
 # gating version
 ENV GATLING_VERSION 3.4.1
 
+RUN addgroup -g 2000 -S appgroup && \
+    adduser -u 2000 -S appuser -g 2000
+
 # create directory for gatling install
 RUN mkdir -p gatling
 
@@ -33,5 +36,7 @@ VOLUME ["/opt/gatling/conf", "/opt/gatling/results", "/opt/gatling/user-files"]
 # set environment variables
 ENV PATH /opt/gatling/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ENV GATLING_HOME /opt/gatling
+
+USER 2000
 
 ENTRYPOINT ["gatling.sh"]
