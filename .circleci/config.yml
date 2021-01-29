@@ -24,8 +24,6 @@ workflows:
           name: deploy_preprod
           retrieve_secrets: none
           env: "preprod"
-          context:
-            - hmpps-common-vars
-            - hmpps-template-kotlin-preprod
+          context: court-probation-preprod
           requires:
             - request-preprod-approval
