@@ -1,2 +1,2 @@
 image:
-  repository: quay.io/hmpps/crime-portal-gateway
+  repository: quay.io/hmpps/cpmg-gatling-performance-tests
