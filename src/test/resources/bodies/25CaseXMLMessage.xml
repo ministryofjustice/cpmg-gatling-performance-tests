@@ -5,7 +5,7 @@
         <wsa:From>
             <wsa:Address>CP_NPS_ML</wsa:Address>
         </wsa:From>
-        <wsa:MessageID>09233523-345b-4351-b623-5dsf35sgs5d6</wsa:MessageID>
+        <wsa:MessageID>${messageId}</wsa:MessageID>
         <wsa:RelatesTo>RelatesToValue</wsa:RelatesTo>
         <wsa:To>CP_NPS</wsa:To>
     </soap:Header>
@@ -940,7 +940,7 @@
                                                     <type>C</type>
                                                     <def_name>MR ${Random_firstName21} ${Random_surname21}</def_name>
                                                     <def_dob>${Random_dobDay21}/${Random_dobMonth2}/${Random_dobYear21}</def_dob>
-                                                    <def_type>P</def_type>
+                                                    <def_type>O</def_type>
                                                     <def_sex>M</def_sex>
                                                     <def_name_elements>
                                                         <title>Mr</title>
@@ -978,7 +978,7 @@
                                                     <type>C</type>
                                                     <def_name>MR ${Random_firstName22} ${Random_surname22}</def_name>
                                                     <def_dob>${Random_dobDay22}/${Random_dobMonth1}/${Random_dobYear22}</def_dob>
-                                                    <def_type>P</def_type>
+                                                    <def_type>O</def_type>
                                                     <def_sex>M</def_sex>
                                                     <def_name_elements>
                                                         <title>Mr</title>
