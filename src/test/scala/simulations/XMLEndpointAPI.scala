@@ -114,12 +114,9 @@ class XMLEndpointAPI extends Simulation {
   //Court room number to take one digit to append to 0 to make '0X'
   def courtRoomNumber(): Int = {
   {
-    val roomMin = 0
-    val roomMax = 9
-
     val r = new Random()
-    val randomValue = roomMin + ((roomMin - roomMax) * r.nextInt())
-    randomValue.toInt
+    r.nextInt(9)
+
   }
 
   }
@@ -168,18 +165,17 @@ class XMLEndpointAPI extends Simulation {
     .exec(http("cpmAPI enpoint")
     .post("/crime-portal-gateway/ws") // Enpoint of mock version.
     .body(ElFileBody("bodies/25CaseXMLMessage.xml")).asXml
-//      .body(ElFileBody("bodies/100CaseXMLMessage.xml"))
-      //.body(StringBody(testXml))
       .requestTimeout(3.minutes)
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
       .check(status.is(200))
       .check(status.not(404), status.not(500)))
     .pause(3)
     .exec(session => {
+      createOutputVariables.println("CaseNo,CourtCode,CourtRoomNumber,LocalTime")
       for (i <- 1 until 25 ) {
         //createCaseNumberCsv.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
         createOutputVariables.println(session("caseNo"+i).as[String],session("court_code").as[String]
-          ,session("courtRoomNumber").as[String],session("local_nowTime").as[String])
+          ,"0" + session("courtRoomNumber").as[String],session("local_nowTime").as[String])
       }
       session
     })
