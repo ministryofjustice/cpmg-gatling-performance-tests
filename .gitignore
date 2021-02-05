@@ -22,6 +22,7 @@ dist
 test-output
 build.log
 results/
+src/test/resources/mined-data/
 
 # misc
 .DS_Store
