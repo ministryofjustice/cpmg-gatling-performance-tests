@@ -188,6 +188,7 @@ class XMLEndpointAPI extends Simulation {
     scn.inject
     (nothingFor(5 seconds),
       atOnceUsers(userCount)
+      //constantUsersPerSec(5).during(10.minutes)
     )
   )
     .protocols(httpProtocol)
