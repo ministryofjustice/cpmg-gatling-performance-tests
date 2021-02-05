@@ -58,14 +58,17 @@ class XMLEndpointAPI extends Simulation {
     cmpgHeader + buildCpmgBody() + cmpgFooter
   }
 
+  val sentHeaders = Map("Content-Type" -> "application/soap+xml")
   //Headers for POST message.
   val httpProtocol = http
-    .baseUrl("https://crime-portal-gateway-dev.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
-    //.baseUrl("https://dev.crime-portal-mirror-gateway.service.justice.gov.uk") // Here is the BaseURL for our live test,we will send our XML to this.
-    .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
-    .acceptEncodingHeader("gzip, deflate")
-    .acceptLanguageHeader("en-US,en;q=0.5")
-    .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
+    // .baseUrl("https://crime-portal-gateway-dev.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
+    .baseUrl("https://crime-portal-gateway-preprod.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
+    .headers(sentHeaders)
+  //.baseUrl("https://dev.crime-portal-mirror-gateway.service.justice.gov.uk") // Here is the BaseURL for our live test,we will send our XML to this.
+  // .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
+  // .acceptEncodingHeader("gzip, deflate")
+  // .acceptLanguageHeader("en-US,en;q=0.5")
+  // .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
 
 
   //Using default and specified values for cmd line args.
