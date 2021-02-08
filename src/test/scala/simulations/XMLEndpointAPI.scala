@@ -64,12 +64,6 @@ class XMLEndpointAPI extends Simulation {
     // .baseUrl("https://crime-portal-gateway-dev.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
     .baseUrl("https://crime-portal-gateway-preprod.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
     .headers(sentHeaders)
-  //.baseUrl("https://dev.crime-portal-mirror-gateway.service.justice.gov.uk") // Here is the BaseURL for our live test,we will send our XML to this.
-  // .acceptHeader("text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8") // Here are the common headers
-  // .acceptEncodingHeader("gzip, deflate")
-  // .acceptLanguageHeader("en-US,en;q=0.5")
-  // .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/16.0")
-
 
   //Using default and specified values for cmd line args.
   private def getProperty(propertyName: String, defaultValue: String): String = {
@@ -150,7 +144,6 @@ class XMLEndpointAPI extends Simulation {
   }
 
   val scn = scenario("Libra Batch Process API") // A scenario for the LIBRA Batch Process.
-    //        feed(csvFeeder)
     .exec(session => session.set("local_nowDate", local_nowDate()))
     .exec(session => session.set("local_nowTime", local_nowTime()))
     .exec(session => session.set("source_fileDate", source_fileDate()))
@@ -167,7 +160,7 @@ class XMLEndpointAPI extends Simulation {
     .feed(csvDefendantMatch,100)
     .exec(http("cpmAPI enpoint")
     .post("/crime-portal-gateway/ws") // Enpoint of mock version.
-    .body(ElFileBody("bodies/25CaseXMLMessage.xml")).asXml
+    .body(ElFileBody("bodies/50CaseXMLMessage.xml")).asXml
       .requestTimeout(3.minutes)
       //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
       .check(status.is(200))
@@ -175,7 +168,7 @@ class XMLEndpointAPI extends Simulation {
     .pause(3)
     .exec(session => {
       createOutputVariables.println("CaseNo,CourtCode,CourtRoomNumber,LocalTime")
-      for (i <- 1 until 25 ) {
+      for (i <- 1 until 50 ) {
         //createCaseNumberCsv.println(session("court_name").as[String] + ", " + session("caseNo"+i).as[String])
         createOutputVariables.println(session("caseNo"+i).as[String],session("court_code").as[String]
           ,"0" + session("courtRoomNumber").as[String],session("local_nowTime").as[String])
@@ -193,10 +186,6 @@ class XMLEndpointAPI extends Simulation {
     )
   )
     .protocols(httpProtocol)
-
-  //setUp(
-  //scn.inject(atOnceUsers(1))
-  //).protocols(httpProtocol)
 
 }
 
