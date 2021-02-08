@@ -187,7 +187,8 @@ class XMLEndpointAPI extends Simulation {
 
     scn.inject
     (nothingFor(5 seconds),
-      atOnceUsers(userCount)
+      //atOnceUsers(userCount)
+        rampUsers(userCount).during(10.minutes)
       //constantUsersPerSec(5).during(10.minutes)
     )
   )
