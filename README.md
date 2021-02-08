@@ -9,4 +9,8 @@ To test it out, simply execute the following command:
 
 or simply:
 
-    $mvn gatling:test
+    $mvn clean gatling:test -DUsers=1
+    
+    This will allow the test to run with 1 user (1 message) via the terminal command prompt. 
+    
+    If the number of cases need adjusting, this can be done by altering .body(ElFileBody("bodies/25CaseXMLMessage.xml")).asXml in XMLEndpointAPI file. Changing '25CaseXMLMessage.xml' to '100CaseXMLMessage.xml'. This will allow a bigger message for more intense load test purposes. 
