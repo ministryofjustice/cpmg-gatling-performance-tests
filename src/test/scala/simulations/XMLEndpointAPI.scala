@@ -27,17 +27,17 @@ class XMLEndpointAPI extends Simulation {
     new PrintWriter(fos, true)
   }
 
-  //  val createCaseNumberCsv = {
-  //    val fos = new java.io.FileOutputStream("src/test/resources/data/caseNumber.csv")
-  //    new java.io.PrintWriter(fos, true)
-  //  }
+    val createCaseNumberCsv = {
+      val fos = new java.io.FileOutputStream("src/test/resources/data/caseNumber.csv")
+      new java.io.PrintWriter(fos, true)
+    }
 
-  //  val createCaseNo = {
-  //    createCaseNumberCsv.print("caseNo\n")
-  //    for (i <- 1 until 2000000000) {
-  //      createCaseNumberCsv.println(generateRandomNumber())
-  //    }
-  //  }
+    val createCaseNo = {
+      createCaseNumberCsv.print("caseNo\n")
+      for (i <- 1 until 10000) {
+        createCaseNumberCsv.println(generateRandomNumber())
+      }
+    }
 
   //Specify for time for hearing date.
   val now = LocalDate.now()

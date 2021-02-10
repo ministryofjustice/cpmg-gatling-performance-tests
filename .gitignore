@@ -23,6 +23,8 @@ test-output
 build.log
 results/
 src/test/resources/mined-data/
+src/test/resources/data/createOutputVariables.csv
+src/test/resources/data/caseNumber.csv
 
 # misc
 .DS_Store
