@@ -69,6 +69,7 @@ class XMLEndpointAPI extends Simulation {
     .baseUrl("https://crime-portal-gateway-"+env+".apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
     .headers(sentHeaders)
 
+
   //Using default and specified values for cmd line args.
   private def getProperty(propertyName: String, defaultValue: String): String = {
     {

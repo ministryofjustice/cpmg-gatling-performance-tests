@@ -16,5 +16,4 @@ or simply:
     -DDuration => This will allow the test to run for 1 minute via the terminal command prompt. 
     -DEnv=preprod => This will allow the tests to be ran against the preprod enviroment. 
     
-    
     If the number of cases need adjusting, this can be done by altering .body(ElFileBody("bodies/25CaseXMLMessage.xml")).asXml in XMLEndpointAPI file. Changing '25CaseXMLMessage.xml' to '100CaseXMLMessage.xml'. This will allow a bigger message for more intense load test purposes. 
