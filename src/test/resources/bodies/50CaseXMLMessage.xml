@@ -1,0 +1,1971 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:ns35="http://www.justice.gov.uk/magistrates/external/ExternalDocumentRequest">
+    <soap:Header xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Action>externalDocument</wsa:Action>
+        <wsa:From>
+            <wsa:Address>CP_NPS_ML</wsa:Address>
+        </wsa:From>
+        <wsa:MessageID>${messageId}</wsa:MessageID>
+        <wsa:RelatesTo>RelatesToValue</wsa:RelatesTo>
+        <wsa:To>CP_NPS</wsa:To>
+    </soap:Header>
+    <soap:Body>
+        <ns35:ExternalDocumentRequest>
+            <documents>
+                <document>
+                    <info>
+                        <general>
+                            <doc_type>EDT_Adult_Daily_Courtlist</doc_type>
+                            <outputtype>R</outputtype>
+                            <version>1_0</version>
+                            <docref>575</docref>
+                            <system>L</system>
+                        </general>
+                        <source_file_name>5_${source_fileDate}_2992_${court_code}00_ADULT_COURT_LIST_DAILY</source_file_name>
+                        <printers/>
+                        <parameters>
+                            <pi_mcc_id>7</pi_mcc_id>
+                            <pi_psa_code>2360</pi_psa_code>
+                            <pi_job_type>ADULT_COURT_LIST_DAILY</pi_job_type>
+                            <pi_run_date>26/11/2020</pi_run_date>
+                            <pi_edt_user>2368</pi_edt_user>
+                        </parameters>
+                        <start_time>09:05:04</start_time>
+                    </info>
+                    <data>
+                        <job>
+                            <printdate>${local_nowDate}</printdate>
+                            <username>gl.userone</username>
+                            <late>N</late>
+                            <adbox>N</adbox>
+                            <means>N</means>
+                            <sessions>
+                                <session>
+                                    <s_id>556805</s_id>
+                                    <doh>${local_nowDate}</doh>
+                                    <lja>${court_name}; Court</lja>
+                                    <cmu>Gl Management Unit 1</cmu>
+                                    <panel>Adult Panel</panel>
+                                    <court>${court_name}</court>
+                                    <room>0${courtRoomNumber}</room>
+                                    <sstart>09:00</sstart>
+                                    <send>12:00</send>
+                                    <blocks>
+                                        <block>
+                                            <sb_id>758095</sb_id>
+                                            <bstart>09:00</bstart>
+                                            <bend>12:00</bend>
+                                            <desc>First Hearings Slot</desc>
+                                            <cases>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo1}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName1} ${Matched_Surname1}</def_name>
+                                                    <def_dob>${Matched_dobDay1}/${Matched_dobMonth1}/${Matched_dobYear1}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName1}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname1}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC1}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo2}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName2} ${Matched_Surname2}</def_name>
+                                                    <def_dob>${Matched_dobDay2}/${Matched_dobMonth2}/${Matched_dobYear2}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName2}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname2}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC2}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo3}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName3} ${Matched_Surname3}</def_name>
+                                                    <def_dob>${Matched_dobDay3}/${Matched_dobMonth3}/${Matched_dobYear3}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName3}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname3}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC3}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo4}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName4} ${Matched_Surname4}</def_name>
+                                                    <def_dob>${Matched_dobDay4}/${Matched_dobMonth4}/${Matched_dobYear4}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName4}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname4}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC4}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo5}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName5} ${Matched_Surname5}</def_name>
+                                                    <def_dob>${Matched_dobDay5}/${Matched_dobMonth5}/${Matched_dobYear5}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName5}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname5}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC5}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo6}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName6} ${Matched_Surname6}</def_name>
+                                                    <def_dob>${Matched_dobDay6}/${Matched_dobMonth6}/${Matched_dobYear6}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName6}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname6}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC6}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo7}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName7} ${Matched_Surname7}</def_name>
+                                                    <def_dob>${Matched_dobDay7}/${Matched_dobMonth7}/${Matched_dobYear7}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName7}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname7}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC7}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo8}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName8} ${Matched_Surname8}</def_name>
+                                                    <def_dob>${Matched_dobDay8}/${Matched_dobMonth8}/${Matched_dobYear8}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName8}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname8}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC8}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo9}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName9} ${Matched_Surname9}</def_name>
+                                                    <def_dob>${Matched_dobDay9}/${Matched_dobMonth9}/${Matched_dobYear9}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName9}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname9}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC9}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo10}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName10} ${Matched_Surname10}</def_name>
+                                                    <def_dob>${Matched_dobDay10}/${Matched_dobMonth10}/${Matched_dobYear10}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName10}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname10}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC10}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo11}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName11} ${Matched_Surname11}</def_name>
+                                                    <def_dob>${Matched_dobDay11}/${Matched_dobMonth11}/${Matched_dobYear11}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName11}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname11}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC11}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo12}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName12} ${Matched_Surname12}</def_name>
+                                                    <def_dob>${Matched_dobDay12}/${Matched_dobMonth12}/${Matched_dobYear12}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName12}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname12}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC12}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo13}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName13} ${Matched_Surname13}</def_name>
+                                                    <def_dob>${Matched_dobDay13}/${Matched_dobMonth13}/${Matched_dobYear13}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName13}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname13}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC13}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo14}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName14} ${Matched_Surname14}</def_name>
+                                                    <def_dob>${Matched_dobDay14}/${Matched_dobMonth14}/${Matched_dobYear14}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName14}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname14}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC14}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo15}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName15} ${Matched_Surname15}</def_name>
+                                                    <def_dob>${Matched_dobDay15}/${Matched_dobMonth15}/${Matched_dobYear15}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName15}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname15}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC15}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo16}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName16} ${Matched_Surname16}</def_name>
+                                                    <def_dob>${Matched_dobDay16}/${Matched_dobMonth16}/${Matched_dobYear16}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName16}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname16}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC16}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo17}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName17} ${Matched_Surname17}</def_name>
+                                                    <def_dob>${Matched_dobDay17}/${Matched_dobMonth17}/${Matched_dobYear17}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName17}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname17}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC17}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo18}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName18} ${Matched_Surname18}</def_name>
+                                                    <def_dob>${Matched_dobDay18}/${Matched_dobMonth18}/${Matched_dobYear18}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName18}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname18}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC18}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo19}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName19} ${Matched_Surname19}</def_name>
+                                                    <def_dob>${Matched_dobDay19}/${Matched_dobMonth19}/${Matched_dobYear19}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName19}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname19}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC19}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo20}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName20} ${Matched_Surname20}</def_name>
+                                                    <def_dob>${Matched_dobDay20}/${Matched_dobMonth20}/${Matched_dobYear20}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName20}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname20}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC20}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo21}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Random_firstName18} ${Random_surname18}</def_name>
+                                                    <def_dob>${Random_dobDay18}/${Random_dobMonth5}/${Random_dobYear18}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Random_firstName18}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Random_surname18}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>2020/1276541A</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo22}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Random_firstName19} ${Random_surname19}</def_name>
+                                                    <def_dob>${Random_dobDay19}/${Random_dobMonth4}/${Random_dobYear19}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Random_firstName19}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Random_surname19}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>2020/1276541A</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo23}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Random_firstName20} ${Random_surname20}</def_name>
+                                                    <def_dob>${Random_dobDay20}/${Random_dobMonth3}/${Random_dobYear20}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Random_firstName20}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Random_surname20}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>2020/1276541A</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo24}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Random_firstName21} ${Random_surname21}</def_name>
+                                                    <def_dob>${Random_dobDay21}/${Random_dobMonth2}/${Random_dobYear21}</def_dob>
+                                                    <def_type>O</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Random_firstName21}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Random_surname21}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>2020/1276541A</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo25}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Random_firstName22} ${Random_surname22}</def_name>
+                                                    <def_dob>${Random_dobDay22}/${Random_dobMonth1}/${Random_dobYear22}</def_dob>
+                                                    <def_type>O</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Random_firstName22}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Random_surname22}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>2020/1276541A</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo26}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName26} ${Matched_Surname26}</def_name>
+                                                    <def_dob>${Matched_dobDay26}/${Matched_dobMonth26}/${Matched_dobYear26}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName26}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname26}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC26}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo27}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName27} ${Matched_Surname27}</def_name>
+                                                    <def_dob>${Matched_dobDay27}/${Matched_dobMonth27}/${Matched_dobYear27}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName27}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname27}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC27}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo28}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName28} ${Matched_Surname28}</def_name>
+                                                    <def_dob>${Matched_dobDay28}/${Matched_dobMonth28}/${Matched_dobYear28}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName28}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname28}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC28}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo29}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName29} ${Matched_Surname29}</def_name>
+                                                    <def_dob>${Matched_dobDay29}/${Matched_dobMonth29}/${Matched_dobYear29}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName29}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname29}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC29}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo30}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName30} ${Matched_Surname30}</def_name>
+                                                    <def_dob>${Matched_dobDay30}/${Matched_dobMonth30}/${Matched_dobYear30}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName30}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname30}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC30}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo31}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName31} ${Matched_Surname31}</def_name>
+                                                    <def_dob>${Matched_dobDay31}/${Matched_dobMonth31}/${Matched_dobYear31}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName31}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname31}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC31}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo32}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName32} ${Matched_Surname32}</def_name>
+                                                    <def_dob>${Matched_dobDay32}/${Matched_dobMonth32}/${Matched_dobYear32}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName32}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname32}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC32}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo33}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName33} ${Matched_Surname33}</def_name>
+                                                    <def_dob>${Matched_dobDay33}/${Matched_dobMonth33}/${Matched_dobYear33}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName33}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname33}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC33}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo34}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName34} ${Matched_Surname34}</def_name>
+                                                    <def_dob>${Matched_dobDay34}/${Matched_dobMonth34}/${Matched_dobYear34}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName34}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname34}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC34}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo35}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName35} ${Matched_Surname35}</def_name>
+                                                    <def_dob>${Matched_dobDay35}/${Matched_dobMonth35}/${Matched_dobYear35}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName35}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname35}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC35}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo36}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName36} ${Matched_Surname36}</def_name>
+                                                    <def_dob>${Matched_dobDay36}/${Matched_dobMonth36}/${Matched_dobYear36}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName36}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname36}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC36}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo37}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName37} ${Matched_Surname37}</def_name>
+                                                    <def_dob>${Matched_dobDay37}/${Matched_dobMonth37}/${Matched_dobYear37}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName37}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname37}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC37}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo38}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName38} ${Matched_Surname38}</def_name>
+                                                    <def_dob>${Matched_dobDay38}/${Matched_dobMonth38}/${Matched_dobYear38}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName38}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname38}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC38}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo39}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName39} ${Matched_Surname39}</def_name>
+                                                    <def_dob>${Matched_dobDay39}/${Matched_dobMonth39}/${Matched_dobYear39}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName39}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname39}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC39}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo40}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName40} ${Matched_Surname40}</def_name>
+                                                    <def_dob>${Matched_dobDay40}/${Matched_dobMonth40}/${Matched_dobYear40}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName40}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname40}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC40}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo41}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName41} ${Matched_Surname41}</def_name>
+                                                    <def_dob>${Matched_dobDay41}/${Matched_dobMonth41}/${Matched_dobYear41}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName41}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname41}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC41}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo42}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName42} ${Matched_Surname42}</def_name>
+                                                    <def_dob>${Matched_dobDay42}/${Matched_dobMonth42}/${Matched_dobYear42}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName42}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname42}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC42}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo43}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName43} ${Matched_Surname43}</def_name>
+                                                    <def_dob>${Matched_dobDay43}/${Matched_dobMonth43}/${Matched_dobYear43}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName43}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname43}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC43}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo44}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName44} ${Matched_Surname44}</def_name>
+                                                    <def_dob>${Matched_dobDay44}/${Matched_dobMonth44}/${Matched_dobYear44}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName44}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname44}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC44}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo45}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName45} ${Matched_Surname45}</def_name>
+                                                    <def_dob>${Matched_dobDay45}/${Matched_dobMonth45}/${Matched_dobYear45}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName45}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname45}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC45}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo46}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName46} ${Matched_Surname46}</def_name>
+                                                    <def_dob>${Matched_dobDay46}/${Matched_dobMonth46}/${Matched_dobYear46}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName46}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname46}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC46}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo47}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName47} ${Matched_Surname47}</def_name>
+                                                    <def_dob>${Matched_dobDay47}/${Matched_dobMonth47}/${Matched_dobYear47}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName47}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname47}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC47}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo48}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName48} ${Matched_Surname48}</def_name>
+                                                    <def_dob>${Matched_dobDay48}/${Matched_dobMonth48}/${Matched_dobYear48}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName48}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname48}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC48}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo49}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName49} ${Matched_Surname49}</def_name>
+                                                    <def_dob>${Matched_dobDay49}/${Matched_dobMonth49}/${Matched_dobYear49}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName49}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname49}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC49}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                                <case>
+                                                    <c_id>1218461</c_id>
+                                                    <h_id>1294273</h_id>
+                                                    <valid>Y</valid>
+                                                    <!-- Less than 10 digits would fail schema validation, if we did it -->
+                                                    <caseno>${caseNo50}</caseno>
+                                                    <type>C</type>
+                                                    <def_name>MR ${Matched_FirstName50} ${Matched_Surname50}</def_name>
+                                                    <def_dob>${Matched_dobDay50}/${Matched_dobMonth50}/${Matched_dobYear50}</def_dob>
+                                                    <def_type>P</def_type>
+                                                    <def_sex>M</def_sex>
+                                                    <def_name_elements>
+                                                        <title>Mr</title>
+                                                        <forename1>${Matched_FirstName50}</forename1>
+                                                        <forename2/>
+                                                        <forename3/>
+                                                        <surname>${Matched_Surname50}</surname>
+                                                    </def_name_elements>
+                                                    <pnc_id>${Matched_PNC50}</pnc_id>
+                                                    <cro_number>CR0006100061</cro_number>
+                                                    <def_addr>
+                                                        <line1>A1</line1>
+                                                    </def_addr>
+                                                    <inf>POL01</inf>
+                                                    <cseq>2</cseq>
+                                                    <listno>1st</listno>
+                                                    <offences>
+                                                        <offence>
+                                                            <oseq>1</oseq>
+                                                            <co_id>1185408</co_id>
+                                                            <code>TH68010</code>
+                                                            <maxpen>EW: 6M ;/or Ultd Fine</maxpen>
+                                                            <title>Theft from a shop</title>
+                                                            <sum>On 01/01/2016 at Town, stole Article, to the value of £100.00, belonging to Person.</sum>
+                                                            <as>Contrary to section 1(1) and 7 of the Theft Act 1968.</as>
+                                                        </offence>
+                                                    </offences>
+                                                </case>
+                                            </cases>
+                                        </block>
+                                    </blocks>
+                                </session>
+                            </sessions>
+                        </job>
+                    </data>
+                </document>
+            </documents>
+        </ns35:ExternalDocumentRequest>
+    </soap:Body>
+</soap:Envelope>
