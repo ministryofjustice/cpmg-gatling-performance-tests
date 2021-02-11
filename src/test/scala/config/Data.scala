@@ -13,4 +13,9 @@ object Data {
   val csvDOBYear = csv("data/dobYear.csv").random
   val csvCaseNumber = csv("data/caseNumber.csv").random
   val csvDefendantMatch = csv("mined-data/defendantMatch.csv").random
+
+  //If Live Data not available to you then use below (uncomment - this data contains dummy information
+  // just to ensure tests dont fail, it will not trigger any Court Case Matches)
+
+  //val csvDefendantMatchMock = csv("data/defendantMatch_Mock.csv").random
 }

@@ -167,6 +167,8 @@ class XMLEndpointAPI extends Simulation {
     .feed(csvSurname,100)
     .feed(csvCaseNumber, 100)
     .feed(csvDefendantMatch,100)
+    //Use below if live data not available to user testing.
+    //.feed(csvDefendantMatchMock,100)
     .exec(http("cpmAPI enpoint")
       .post("/crime-portal-gateway/ws") // Enpoint of mock version.
       .body(ElFileBody("bodies/50CaseXMLMessage.xml")).asXml
