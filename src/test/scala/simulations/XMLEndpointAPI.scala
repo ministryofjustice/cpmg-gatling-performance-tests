@@ -138,6 +138,18 @@ class XMLEndpointAPI extends Simulation {
   //Run once through set duration to 0.
   def testDuration: Int = getProperty("Duration", "0").toInt
 
+  //Run with 'offenderData' if stored live data is visible in mined-data directory
+  // Otherwise run with 'normalData' which is available in mined-data.
+  def dataUsed: String = getProperty("Data","normalData")
+  //If statement to pick the given stated databank from cmd line to be used in the test.
+    val csvDefendantMatch =
+  if (dataUsed == "offenderData") {
+    csv("mined-data/defendantMatch.csv").random
+  }
+  else  {
+    csv("mined-data/defendantMatch_Dummy.csv").random
+  }
+
   //Number of bodies from document -> document.
   def numberOfMessages: Int = getProperty("Number_of_messages", "1").toInt
 
@@ -145,10 +157,10 @@ class XMLEndpointAPI extends Simulation {
 
   before {
     println(s"Running tests with ${userCount} users.")
-    //println(s"Ramp duration is: ${rampDuration} seconds.")
     println(s"Test duration is: ${testDuration} minutes.")
     println(s"The enviroment that is being tested against is: ${env}.")
     println(s"Number of messages used in test are: ${numberOfMessages}.")
+    println(s"The test is running with ${dataUsed}.")
   }
 
   val scn = scenario("Libra Batch Process API") // A scenario for the LIBRA Batch Process.
