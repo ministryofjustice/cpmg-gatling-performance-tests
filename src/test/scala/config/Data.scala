@@ -12,5 +12,6 @@ object Data {
   val csvDOBMonth = csv("data/dobMonth.csv").random
   val csvDOBYear = csv("data/dobYear.csv").random
   val csvCaseNumber = csv("data/caseNumber.csv").random
-  val csvDefendantMatch = csv("mined-data/defendantMatch.csv").random
+  //val csvDefendantMatch = csv("mined-data/defendantMatch.csv").random
+  //val csvDefendantMatchDummy = csv("mined-data/defendantMatch_Dummy.csv").random
 }
