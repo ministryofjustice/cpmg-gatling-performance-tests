@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: "cpmg-gatling-performance-tests"
 spec:
-  ttlSecondsAfterFinished: 100
+  ttlSecondsAfterFinished: 0
   template:
     spec:
       containers:
