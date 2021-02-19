@@ -31,3 +31,12 @@ or simply:
  These variables within this file will appear after a test is ran. 
  They can be used to query the requests that were made within the database to confirm that services were triggered and can track any errors seen within the process.
   
+# Build and run Docker image locally
+
+If making changes to the docker image you can build and run these locally using the following commands:
+
+`docker build ./ -t cpmg-performance-test`
+
+You will need to retrieve the AWS S3 access details from the kubernetes cluster secret to run the tests with the following command:
+
+`docker run -e AWS_ACCESS_KEY_ID={ACCESS_KEY_ID} -e AWS_SECRET_ACCESS_KEY={SECRET_ACCESS_KEY} -e S3_BUCKET_NAME={S3_BUCKET_NAME} cpmg-performance-test:latest`
