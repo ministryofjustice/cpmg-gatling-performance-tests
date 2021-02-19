@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name: "cpmg-gatling-performance-tests"
 spec:
+  ttlSecondsAfterFinished: 0
   template:
     spec:
       containers:
@@ -24,6 +25,5 @@ spec:
               secretKeyRef:
                 name: perf-test-data-s3-credentials
                 key: SECRET_ACCESS_KEY
-
       restartPolicy: Never
   backoffLimit: 1
