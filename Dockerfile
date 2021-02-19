@@ -9,7 +9,8 @@ COPY . /app
 
 ENV aws_cli=2.1.27
 
-RUN apt-get update && apt-get install -y jq python-pip python-dev
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.1.27.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN ./aws/install
 
-# Install AWS-CLI
-RUN pip install awscli
+CMD ["/app/run.sh"]
