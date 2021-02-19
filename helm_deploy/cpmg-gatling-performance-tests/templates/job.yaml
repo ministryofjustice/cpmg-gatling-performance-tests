@@ -3,10 +3,27 @@ kind: Job
 metadata:
   name: "cpmg-gatling-performance-tests"
 spec:
+  ttlSecondsAfterFinished: 100
   template:
     spec:
       containers:
       - name: "cpmg-gatling-performance-tests"
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        env:
+          - name: S3_BUCKET_NAME
+            valueFrom:
+              secretKeyRef:
+                name: perf-test-data-s3-credentials
+                key: bucket_name
+          - name: AWS_ACCESS_KEY_ID
+            valueFrom:
+              secretKeyRef:
+                name: perf-test-data-s3-credentials
+                key: access_key_id
+          - name: AWS_SECRET_ACCESS_KEY
+            valueFrom:
+              secretKeyRef:
+                name: perf-test-data-s3-credentials
+                key: secret_access_key
       restartPolicy: Never
   backoffLimit: 1
