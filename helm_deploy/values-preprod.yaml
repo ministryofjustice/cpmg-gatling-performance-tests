@@ -1,2 +1,5 @@
 image:
   repository: quay.io/hmpps/cpmg-gatling-performance-tests
+  
+ PERF_TEST_USERS: 1
+ PERF_TEST_DURATION: 1
