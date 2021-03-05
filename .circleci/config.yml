@@ -31,6 +31,9 @@ workflows:
           requires:
             - helm_lint
             - build_docker
+          filters:
+            branches:
+              only: main
       - hmpps/deploy_env:
           name: run_perf_10k_cases
           retrieve_secrets: none
@@ -46,6 +49,9 @@ workflows:
           requires:
             - helm_lint
             - build_docker
+          filters:
+            branches:
+              only: main
       - hmpps/deploy_env:
           name: run_perf_30k_cases
           retrieve_secrets: none
@@ -61,6 +67,9 @@ workflows:
           requires:
             - helm_lint
             - build_docker
+          filters:
+            branches:
+              only: main
       - hmpps/deploy_env:
           name: run_perf_60k_cases
           retrieve_secrets: none
@@ -76,6 +85,9 @@ workflows:
           requires:
             - helm_lint
             - build_docker
+          filters:
+            branches:
+              only: main
       - hmpps/deploy_env:
           name: run_perf_80k_cases
           retrieve_secrets: none
