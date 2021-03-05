@@ -5,6 +5,7 @@ orbs:
   
 jobs:
   run-perf-test:
+    executor: ministryofjustice/hmpps@2.2
     parameters:
       users:
         type: int
@@ -13,16 +14,14 @@ jobs:
         type: int
         default: 1
     steps:
-      hmpps/deploy_env:
-        name: deploy_preprod_debug
-        retrieve_secrets: none
-        env: "preprod"
-        context: court-probation-preprod
-        slack_notification: true
-        slack_channel_name: probation_in_court_dev
-        helm_additional_args: "--set PERF_TEST_USERS=<< parameters.users >> --set PERF_TEST_DURATION=<< parameters.duration >>"
-        requires:
-          - request-preprod-approval            
+      - hmpps/deploy_env:
+          name: deploy_preprod
+          retrieve_secrets: none
+          env: "preprod"
+          context: court-probation-preprod
+          slack_notification: true
+          slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=<< parameters.users >> --set PERF_TEST_DURATION=<< parameters.duration >>"
 
 workflows:
   version: 2
@@ -40,7 +39,8 @@ workflows:
       - run-perf-test-debug:
           users: 1
           duration: 1
-          requires: request-preprod-debug-approval
+          requires: 
+            - request-preprod-debug-approval
       - request-preprod-2-approval:
           type: approval
           requires:
@@ -49,4 +49,5 @@ workflows:
       - run-perf-test-debug:
           users: 2
           duration: 2
-          requires: request-preprod-2-approval
+          requires: 
+            - request-preprod-2-approval
