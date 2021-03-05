@@ -8,10 +8,10 @@ jobs:
     executor: ministryofjustice/hmpps@2.2
     parameters:
       users:
-        type: int
+        type: integer
         default: 1
       duration:
-        type: int
+        type: integer
         default: 1
     steps:
       - hmpps/deploy_env:
