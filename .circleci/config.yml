@@ -46,7 +46,7 @@ workflows:
           requires:
             - helm_lint
             - build_docker
-      - run-perf-test-debug:
+      - run-perf-test:
           users: 2
           duration: 2
           requires: 
