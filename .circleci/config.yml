@@ -31,8 +31,8 @@ workflows:
           requires:
             - helm_lint
             - build_docker
-      - run-perf-test:
-          name: run_perf_debug
+      - hmpps/deploy_env:
+          name: run_perf_2
           retrieve_secrets: none
           env: "preprod"
           context: court-probation-preprod
