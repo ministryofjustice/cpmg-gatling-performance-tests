@@ -25,5 +25,9 @@ spec:
               secretKeyRef:
                 name: perf-test-data-s3-credentials
                 key: secret_access_key
+          - name: PERF_TEST_USERS
+            value: "{{ .Values.PERF_TEST_USERS }}"            
+          - name: PERF_TEST_DURATION
+            value: "{{ .Values.PERF_TEST_DURATION }}"
       restartPolicy: Never
   backoffLimit: 1
