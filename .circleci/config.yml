@@ -14,7 +14,7 @@ jobs:
         type: integer
         default: 1
     steps:
-      - hmpps/deploy_env:
+      - deploy_env:
           name: deploy_preprod
           retrieve_secrets: none
           env: "preprod"
