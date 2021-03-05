@@ -20,7 +20,9 @@ workflows:
           name: run_perf_50_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=1 --set PERF_TEST_DURATION=1"
@@ -38,7 +40,9 @@ workflows:
           name: run_perf_10k_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=200 --set PERF_TEST_DURATION=10"
@@ -56,7 +60,9 @@ workflows:
           name: run_perf_30k_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=600 --set PERF_TEST_DURATION=10"
@@ -74,7 +80,9 @@ workflows:
           name: run_perf_60k_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=1200 --set PERF_TEST_DURATION=10"
@@ -92,7 +100,9 @@ workflows:
           name: run_perf_80k_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=1600 --set PERF_TEST_DURATION=10"
