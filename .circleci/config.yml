@@ -25,7 +25,7 @@ workflows:
           slack_channel_name: probation_in_court_dev
           helm_additional_args: "--set PERF_TEST_USERS=1 --set PERF_TEST_DURATION=1"
           requires: 
-            - request-preprod-debug-approval
+            - request-preprod-50-cases-approval
       - request-preprod-10k-cases-approval:
           type: approval
           requires:
