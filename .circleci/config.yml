@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   hmpps: ministryofjustice/hmpps@2.2
-
+  
 workflows:
   version: 2
   build-test-and-deploy:
@@ -11,21 +11,100 @@ workflows:
           name: helm_lint
       - hmpps/build_docker:
           name: build_docker
-      - request-preprod-approval:
+      - request-preprod-50-cases-approval:
+          type: approval
+          requires:
+            - helm_lint
+            - build_docker
+      - hmpps/deploy_env:
+          name: run_perf_50_cases
+          retrieve_secrets: none
+          env: "preprod"
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
+          slack_notification: true
+          slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=1 --set PERF_TEST_DURATION=1"
+          requires: 
+            - request-preprod-50-cases-approval
+      - request-preprod-10k-cases-approval:
           type: approval
           requires:
             - helm_lint
             - build_docker
           filters:
             branches:
-              only:
-                - main
+              only: main
       - hmpps/deploy_env:
-          name: deploy_preprod
+          name: run_perf_10k_cases
           retrieve_secrets: none
           env: "preprod"
-          context: court-probation-preprod
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
           slack_notification: true
           slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=200 --set PERF_TEST_DURATION=10"
+          requires: 
+            - request-preprod-10k-cases-approval
+      - request-preprod-30k-cases-approval:
+          type: approval
           requires:
-            - request-preprod-approval
+            - helm_lint
+            - build_docker
+          filters:
+            branches:
+              only: main
+      - hmpps/deploy_env:
+          name: run_perf_30k_cases
+          retrieve_secrets: none
+          env: "preprod"
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
+          slack_notification: true
+          slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=600 --set PERF_TEST_DURATION=10"
+          requires: 
+            - request-preprod-30k-cases-approval
+      - request-preprod-60k-cases-approval:
+          type: approval
+          requires:
+            - helm_lint
+            - build_docker
+          filters:
+            branches:
+              only: main
+      - hmpps/deploy_env:
+          name: run_perf_60k_cases
+          retrieve_secrets: none
+          env: "preprod"
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
+          slack_notification: true
+          slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=1200 --set PERF_TEST_DURATION=10"
+          requires: 
+            - request-preprod-60k-cases-approval
+      - request-preprod-80k-cases-approval:
+          type: approval
+          requires:
+            - helm_lint
+            - build_docker
+          filters:
+            branches:
+              only: main
+      - hmpps/deploy_env:
+          name: run_perf_80k_cases
+          retrieve_secrets: none
+          env: "preprod"
+          context:
+            - hmpps-common-vars
+            - court-probation-preprod
+          slack_notification: true
+          slack_channel_name: probation_in_court_dev
+          helm_additional_args: "--set PERF_TEST_USERS=1600 --set PERF_TEST_DURATION=10"
+          requires: 
+            - request-preprod-80k-cases-approval
