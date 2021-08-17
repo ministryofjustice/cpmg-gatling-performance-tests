@@ -63,10 +63,8 @@ class XMLEndpointAPI extends Simulation {
   }
 
   val sentHeaders = Map("Content-Type" -> "application/soap+xml")
-  //Headers for POST message.
   val httpProtocol = http
-    // .baseUrl("https://crime-portal-gateway-dev.apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
-    .baseUrl("https://crime-portal-gateway-"+env+".apps.live-1.cloud-platform.service.justice.gov.uk") // Here is the BaseURL which is mock version.
+    .baseUrl("https://"+env+".crime-portal-mirror-gateway.service.justice.gov.uk")
     .headers(sentHeaders)
 
   //Using default and specified values for cmd line args.
