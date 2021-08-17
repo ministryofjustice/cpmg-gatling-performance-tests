@@ -178,11 +178,11 @@ class XMLEndpointAPI extends Simulation {
     .feed(csvDefendantMatch,100)
     //Use below if live data not available to user testing.
     //.feed(csvDefendantMatchMock,100)
-    .exec(http("cpmAPI enpoint")
-      .post("/crime-portal-gateway/ws") // Enpoint of mock version.
+    .exec(http("crime-portal-gateway POST")
+      .post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
+//      .post("/crime-portal-gateway/ws") // Enpoint of mock version.
       .body(ElFileBody("bodies/50CaseXMLMessage.xml")).asXml
       .requestTimeout(3.minutes)
-      //.post("/mirrorgateway/service/cpmgwextdocapi") //Enpoint for live
       .check(status.is(200))
       .check(status.not(404), status.not(500)))
     .pause(3)
