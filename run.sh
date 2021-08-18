@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+TIMESTAMP=$(date +"%Y-%m-%dT%H-%M-%S")
 DATE=$(date +"%Y-%m-%d")
 TIME=$(date +"%H-%M-%S")
 OUTPUT_PATH=cpmg-gatling-performance-tests
